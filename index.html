@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Forever</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #4b1d1d;
+      overflow-x: hidden;
+    }
+
+    .heart-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://i.imgur.com/JHt5wGz.png');
+      background-size: cover;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #fff0f3;
+      text-shadow: 2px 2px 6px #ff6188;
+    }
+
+    .love-letter {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 0 10px 30px rgba(255, 0, 128, 0.3);
+      line-height: 1.8;
+      font-size: 1.2rem;
+      animation: fadeIn 3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .sparkle {
+      position: absolute;
+      animation: sparkleMove 10s infinite ease-in-out;
+    }
+
+    @keyframes sparkleMove {
+      0% { transform: translateY(0) rotate(0); opacity: 1; }
+      100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart-background"></div>
+
+  <header>
+    Tình yêu là phép màu đẹp nhất trong cuộc sống
+  </header>
+
+  <section class="love-letter">
+    <p>
+      Em à, từ lần đầu ánh mắt ta chạm nhau, trái tim anh như thắt lại một nhịp.<br>
+      Những hành động , cử chỉ , lời nói ấy khiến con tim anh xao xuyến không ngơi.<br>
+      Từ ngày em bước vào cuộc đời anh , mỗi ngày với anh như là 1 bản nhạc du dương,lãng mạn.<br>
+      Anh muốn cùng em đi qua mọi thăng trầm trong cuộc sống,cùng em qua bao nắng mưa .<br>
+      Tình yêu anh dành cho em không phải là nhất thời, mà là đời đời suốt kiếp.<br><br>
+      Nếu trái tim anh là ngọn đèn, thì ánh sáng ấy chỉ chiếu sáng một mình em.<br>
+      Anh không thể hứa điều gì quá lớn lao, nhưng anh hứa sẽ luôn bên cạnh em, trong từng khoảnh khắc, từng giây phút cuộc đời này.
+   </p>
+  </section>
+
+  <div class="footer">
+    <p>❤️ Gửi Ngọc Thùy , TÌNH YÊU to lớn cuộc đời anh ❤️</p>
+  </div>
+
+  <script>
+    // Create sparkles effect
+    for (let i = 0; i < 30; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.width = `${Math.random() * 6 + 4}px`;
+      sparkle.style.height = sparkle.style.width;
+      sparkle.style.background = 'radial-gradient(circle, #fff, pink, red)';
+      sparkle.style.borderRadius = '50%';
+      sparkle.style.top = `${Math.random() * window.innerHeight}px`;
+      sparkle.style.left = `${Math.random() * window.innerWidth}px`;
+      sparkle.style.opacity = Math.random();
+      sparkle.style.zIndex = 10;
+      sparkle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      document.body.appendChild(sparkle);
+    }
+  </script>
+</body>
+</html>
